@@ -102,7 +102,7 @@ protected:
 
 	QList<QString>* m_instanceTitleSim;
     QTimer *m_simTimer, *m_showResultsTimer;
-    int m_currSimStep;
+    unsigned long m_currSimStep;
 
 	static constexpr int SimDelay = 200;
 	static constexpr double HarmfulNegativeVoltage = -0.5;
