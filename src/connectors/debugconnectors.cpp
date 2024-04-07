@@ -62,7 +62,7 @@ void DebugConnectors::monitorConnections(bool enabled)
 
 QSet<QString> DebugConnectors::getItemConnectorSet(ConnectorItem *connectorItem) {
 	QSet<QString> set;
-	static QRegularExpression re("^(AM|VM|OM)\\d+");
+    static QRegularExpression re("^(AM|VM|OM|Oscilloscope)\\d+");
 	Q_FOREACH (ConnectorItem * toConnectorItem, connectorItem->connectedToItems()) {
 		ItemBase * attachedToItem = toConnectorItem->attachedTo();
 		VirtualWire * virtualWire = qobject_cast<VirtualWire *>(attachedToItem);
